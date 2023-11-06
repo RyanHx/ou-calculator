@@ -3,9 +3,9 @@ function moduleSubmit(event) {
     const html =
         `<tr>
         <td>${event.target[0].value}</td>
-        <td>${event.target[1].value}</td>
-        <td>${event.target[2].value}</td>
-        <td>${event.target[3].value}</td>
+        <td class="text-end">${event.target[1].value}</td>
+        <td class="text-end">${event.target[2].value}</td>
+        <td class="text-end">${event.target[3].value}</td>
         <td class="text-end"><button class="btn btn-outline-danger" onclick="removeModule(this)">X</button></td>
     </tr>`;
     tableBody.insertAdjacentHTML('beforeend', html);
@@ -64,8 +64,6 @@ function calculateClass() {
     if (lvl2CredsNeeded > 0 || lvl3CredsNeeded > 0) {
         return -1;
     }
-    lvl2Modules.sort((a, b) => (a.grade - b.grade));
-    lvl3Modules.sort((a, b) => (a.grade - b.grade));
     lvl2Modules = getTop120Credits(lvl2Modules);
     lvl3Modules = getTop120Credits(lvl3Modules);
     let moduleScore = 0;
@@ -87,6 +85,7 @@ function calculateClass() {
 }
 
 function getTop120Credits(modules) {
+    modules.sort((a, b) => (a.grade - b.grade));
     let credits = 0;
     const topModules = [];
     while (credits < 120) {
