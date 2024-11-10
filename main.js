@@ -84,6 +84,11 @@ function calculateClass() {
     }
 }
 
+/**
+ * 
+ * @param {any[]} modules List of module objects.
+ * @returns {any[]} List of modules sorted by grade summing to 120 credits.
+ */
 function getTop120Credits(modules) {
     modules.sort((a, b) => (a.grade - b.grade));
     let credits = 0;
@@ -96,6 +101,12 @@ function getTop120Credits(modules) {
     return topModules;
 }
 
+/**
+ * 
+ * @param {any[]} modules List of Level 3 modules and grades
+ * @param {Number} minimumGrade Minimum grade required to apply to borderline test.
+ * @returns {boolean} Whether student has enough credits (60) at `minimumGrade`.
+ */
 function testBorderline(modules, minimumGrade) {
     let creditsAtMinGrade = 0;
     for (const module of modules) {
@@ -105,5 +116,6 @@ function testBorderline(modules, minimumGrade) {
     }
     return creditsAtMinGrade >= 60;
 }
+
 const form = document.getElementById("moduleForm");
 form.addEventListener("submit", moduleSubmit);
