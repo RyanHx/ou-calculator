@@ -1,88 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/react.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open University Degree Classification Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-
-<body>
-    <div class="container p-3">
-        <div class="row text-center mb-2">
-            <h1>Open University Degree Classification Calculator</h1>
-        </div>
-        <div class="row text-center">
-            <p>Add all of your level 2 and level 3 modules below.</p>
-            <p>Level 1 modules do not count towards your final classification.</p>
-        </div>
-        <div class="row">
-            <form id="moduleForm" class="border border-primary-subtle rounded pt-2">
-                <div class="row mb-2">
-                    <div class="col-md">
-                        <label for="moduleNameInput" class="form-label">Module name:</label>
-                        <input type="text" class="form-control" id="moduleNameInput">
-                    </div>
-                    <div class="col-md">
-                        <label for="moduleLevelSelect" class="form-label">Level:</label>
-                        <select class="form-select" id="moduleLevelSelect">
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="col-md">
-                        <label for="moduleClassificationSelect" class="form-label">Classification:</label>
-                        <select class="form-select" id="moduleClassificationSelect">
-                            <option value="1">Distinction</option>
-                            <option value="2">Grade 2 Pass</option>
-                            <option value="3">Grade 3 Pass</option>
-                            <option value="4">Grade 4 Pass</option>
-                        </select>
-                    </div>
-                    <div class="col-md">
-                        <label for="creditsSelect" class="form-label">Credits:</label>
-                        <select class="form-select" id="creditsSelect">
-                            <option value="30">30</option>
-                            <option value="60">60</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col text-center">
-                        <button type="submit" class="btn btn-primary m-2">Add module</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row mb-3">
-            <div class="table-responsive px-0 mt-2">
-                <table id="modulesTable" class="table align-middle">
-                    <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th class="col-2 text-end" scope="col">Level</th>
-                            <th class="col-2 text-end" scope="col">Classification</th>
-                            <th class="col-2 text-end" scope="col">Credits</th>
-                            <th class="col-2 text-end" scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="row justify-content-center mb-5">
-            <p id="classification" class="h3 text-center border border-success-subtle rounded w-auto py-2 px-3">Not
-                enough credits entered</p>
-        </div>
-        <footer>
-            <p class="text-center">This application was developed independently and is not affiliated with the Open
-                University.</p>
-        </footer>
-    </div>
-    <script src="main.js"></script>
-</body>
-
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
