@@ -9,7 +9,8 @@ function App() {
    * @param {any[]} modules List of modules
    * @returns 
    */
-  function calculateClass(modules) {
+  function updateModules(modules) {
+    setModules(modules);
     const lvl2Creds = modules.filter(m => m.level == 2).reduce((prev, module) => prev + module.credits, 0);
     const lvl3Creds = modules.filter(m => m.level == 3).reduce((prev, module) => prev + module.credits, 0);
     if (lvl2Creds < 120 || lvl3Creds < 120) {
@@ -86,8 +87,7 @@ function App() {
             grade: parseInt(e.target.grade.value),
             credits: parseInt(e.target.credits.value)
           }];
-          setModules(newModules);
-          calculateClass(newModules);
+          updateModules(newModules);
         }}>
           <div className="row mb-2">
             <div className="col-md">
@@ -168,8 +168,7 @@ function App() {
                   <td className="text-end">
                     <button className="btn btn-outline-danger" onClick={() => {
                       const newModules = modules.filter(m => m.key !== module.key);
-                      setModules(newModules);
-                      calculateClass(newModules);
+                      updateModules(newModules);
                     }}>
                       X
                     </button>
@@ -181,10 +180,17 @@ function App() {
         </div>
       </div>
       <footer>
-        <p className="text-center">
-          This application was developed independently and is not affiliated with
-          the Open University.
-        </p>
+        <div className='row'>
+          <p className="text-center">
+            This application was developed independently and is not affiliated with
+            the Open University.
+          </p>
+        </div>
+        <div className='row'>
+          <p className='text-center'>
+            Read the source code <a href='https://github.com/RyanHx/ou-calculator' target='_blank'>here</a>.
+          </p>
+        </div>
       </footer>
     </div>
   )
