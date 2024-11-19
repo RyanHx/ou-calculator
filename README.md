@@ -2,8 +2,9 @@
 
 Calculate the expected grade for your Open University honours degree.
 
-## Getting Started
-Regular users can use the application [here](https://ryanhx.github.io/ou-calculator/).
+### Regular users can find the calculator [here](https://ryanhx.github.io/ou-calculator/).
+
+## Development
 
 The instructions below will give you a copy of the project on
 your local machine for development and testing purposes.
