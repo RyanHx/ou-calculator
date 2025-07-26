@@ -90,35 +90,35 @@ function App() {
           updateModules(newModules);
         }}>
           <div className="row mb-2">
-            <div className="col-md">
-              <label htmlFor="moduleNameInput" className="form-label">
-                Module name:
+            <div className="col-md text-md-start text-center">
+              <label htmlFor="moduleNameInput" className="form-label mb-1 ps-0 ps-md-1">
+                Module name
               </label>
               <input name='name' type="text" className="form-control" id="moduleNameInput" />
             </div>
-            <div className="col-md">
-              <label htmlFor="moduleLevelSelect" className="form-label">
-                Level:
+            <div className="col-md text-md-start text-center">
+              <label htmlFor="moduleLevelSelect" className="form-label mb-1 mt-2 mt-md-0 ps-0 ps-md-1">
+                Level
               </label>
-              <select name='level' className="form-select" id="moduleLevelSelect">
+              <select name='level' className="form-select text-md-start text-center px-3" id="moduleLevelSelect">
                 <option value={2}>2</option>
                 <option value={3}>3</option>
               </select>
             </div>
-            <div className="col-md">
-              <label htmlFor="creditsSelect" className="form-label">
-                Credits:
+            <div className="col-md text-md-start text-center">
+              <label htmlFor="creditsSelect" className="form-label mb-1 mt-2 mt-md-0 ps-0 ps-md-1">
+                Credits
               </label>
-              <select name='credits' className="form-select" id="creditsSelect">
+              <select name='credits' className="form-select text-md-start text-center px-3" id="creditsSelect">
                 <option value={30}>30</option>
                 <option value={60}>60</option>
               </select>
             </div>
-            <div className="col-md">
-              <label htmlFor="moduleGradeSelect" className="form-label">
-                Grade:
+            <div className="col-md text-md-start text-center">
+              <label htmlFor="moduleGradeSelect" className="form-label mb-1 mt-2 mt-md-0 ps-0 ps-md-1">
+                Grade
               </label>
-              <select name='grade' className="form-select" id="moduleGradeSelect">
+              <select name='grade' className="form-select text-md-start text-center px-3" id="moduleGradeSelect">
                 <option value={1}>Distinction</option>
                 <option value={2}>Grade 2 Pass</option>
                 <option value={3}>Grade 3 Pass</option>
@@ -135,14 +135,14 @@ function App() {
           </div>
         </form>
       </div>
-      <div className="row justify-content-center">
-        <p className="h3 text-center border border-success-subtle rounded w-auto py-2 px-3">
+      <div className="row mb-3 justify-content-center">
+        <p className="h3 text-center border border-success-subtle rounded w-auto py-2 px-3 mb-0">
           {classification}
         </p>
       </div>
-      <div className="row mb-3">
-        <div className="table-responsive px-0 mt-2">
-          <table className="table align-middle">
+      <div className="row mb-3 border rounded pt-1 pb-2 p-md-3 pt-md-1">
+        <div className="table-responsive px-0">
+          <table className="table align-middle mb-0">
             <thead>
               <tr>
                 <th scope="col">Name</th>
